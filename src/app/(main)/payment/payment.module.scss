@@ -1,0 +1,11 @@
+.wrapper {
+  @apply w-full h-[85vh] flex items-center gap-y-4;
+
+  & > .area {
+    @apply w-full flex flex-col items-center gap-y-4;
+
+    & > .heading {
+      @apply text-3xl;
+    }
+  }
+}

@@ -1,0 +1,4 @@
+.badge {
+  @apply px-2 py-0.5 absolute top-[42px] right-3 text-xs text-gray-800 uppercase cursor-pointer
+  border-gray-500 rounded-lg bg-gray-500 transition-colors hover:bg-gray-500/80;
+}

@@ -1,0 +1,45 @@
+@import '@/common/styles/mixins';
+
+.gallery {
+  @apply py-3 grid grid-cols-6 gap-3;
+}
+
+.item {
+  @apply flex items-end relative rounded-lg overflow-hidden shadow-lg transition-transform;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &.vertical {
+    @apply h-72;
+  }
+
+  &.horizontal {
+    @apply h-44 mb-8;
+  }
+
+  &.with_text {
+    @include fade-bg-gradient(0deg);
+
+    &::before {
+      @apply rounded-lg;
+    }
+  }
+
+  img {
+    @apply object-center object-cover;
+  }
+
+  .content {
+    @apply w-full m-3 relative z-20 text-center;
+
+    .title {
+      @apply mb-1 text-white;
+    }
+
+    .sub_title {
+      @apply text-gray-500;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.placeholder {
+  @apply w-full h-full flex absolute top-0 left-0 bg-gray-800/70;
+
+  & > div {
+    @apply m-auto text-center;
+
+    & > p {
+      @apply mb-4 text-lg text-white;
+    }
+
+    .button {
+      @apply px-6 text-base;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.rating_form {
+  & > .heading {
+    @apply mb-4 text-center;
+  }
+
+  .textarea {
+    @apply w-full min-h-[110px] mt-4 p-3 block text-sm border-none outline-none resize-none rounded-md bg-gray-800;
+  }
+
+  .errors {
+    @apply pl-4 mt-3 text-sm list-disc text-red-500;
+  }
+}

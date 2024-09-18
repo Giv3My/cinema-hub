@@ -1,0 +1,31 @@
+.editor_wrapper {
+  @apply mt-2 border-0;
+
+  & > label {
+    & > span {
+      @apply text-[15px] font-medium text-gray-600;
+    }
+  }
+
+  .wrapper {
+    .toolbar {
+      @apply mt-2 mb-0 p-3 rounded-t-lg outline-none bg-gray-800/40;
+
+      & > div {
+        @apply m-0;
+
+        & > div {
+          @apply mx-1.5 outline-none shadow-none border-gray-500 bg-gray-500 transition-colors hover:bg-gray-300;
+        }
+      }
+    }
+
+    .editor {
+      @apply px-4 h-80 border rounded-b-lg border-gray-700 text-gray-500 cursor-text overflow-hidden;
+    }
+  }
+
+  .error {
+    @apply mb-2 font-medium text-sm text-red-500;
+  }
+}

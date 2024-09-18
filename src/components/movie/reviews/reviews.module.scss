@@ -1,0 +1,23 @@
+.reviews {
+  @apply grid grid-cols-4 gap-10;
+
+  & > .review {
+    @apply p-6 rounded-lg shadow-md bg-gray-800;
+
+    & > .user {
+      @apply mb-2 flex items-center;
+
+      & > .avatar {
+        @apply mr-3 block rounded-full;
+      }
+    }
+
+    & > .text {
+      @apply mt-2 text-sm leading-relaxed;
+    }
+  }
+
+  & > .not_found {
+    @apply col-span-4;
+  }
+}

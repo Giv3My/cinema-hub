@@ -1,0 +1,12 @@
+.actions {
+  @apply flex items-center gap-4;
+
+  & > button {
+    @apply text-primary/80 border-none outline-none bg-transparent
+    transition-opacity hover:text-primary;
+
+    & > * {
+      @apply size-5;
+    }
+  }
+}

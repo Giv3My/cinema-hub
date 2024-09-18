@@ -1,0 +1,43 @@
+.upload_field {
+  @apply relative;
+
+  .upload_flex {
+    @apply flex;
+
+    & > label {
+      @apply mr-6 block;
+
+      .error {
+        @apply mb-2 relative -bottom-2 font-medium text-sm text-red-500;
+      }
+
+      & > span {
+        @apply mb-4 block text-xs uppercase text-gray-600;
+      }
+
+      & > input {
+        @apply w-full block text-sm text-gray-600 cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-full
+        file:border-0 file:text-sm file:font-semibold file:text-white file:cursor-pointer file:bg-primary/70
+        transition-opacity;
+      }
+
+      &:hover {
+        & > input {
+          @apply opacity-100;
+        }
+      }
+    }
+
+    & > .upload_image_container {
+      @apply w-24 h-24 shrink-0 relative;
+
+      img {
+        @apply object-cover object-center rounded-md;
+      }
+
+      & > span {
+        @apply animate-fade;
+      }
+    }
+  }
+}

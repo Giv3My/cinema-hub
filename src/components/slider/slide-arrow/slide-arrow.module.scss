@@ -1,0 +1,15 @@
+.arrow {
+  @apply p-3 flex items-center justify-center absolute bottom-8 text-gray-200 rounded-full z-20 bg-black/30 animate-fade;
+
+  &.left {
+    @apply right-24;
+  }
+
+  &.right {
+    @apply right-8;
+  }
+
+  & > .icon {
+    @apply size-5;
+  }
+}

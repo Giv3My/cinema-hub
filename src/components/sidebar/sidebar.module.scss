@@ -1,0 +1,7 @@
+.wrapper {
+  @apply w-72 h-full flex flex-col fixed inset-y-0 z-30;
+
+  & > .sidebar {
+    @apply h-full px-5 py-6 flex flex-col items-center gap-x-4 border-r border-gray-300 overflow-y-auto;
+  }
+}

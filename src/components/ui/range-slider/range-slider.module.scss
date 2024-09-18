@@ -1,0 +1,21 @@
+.slider {
+  @apply w-full h-1 relative rounded-lg select-none cursor-pointer bg-gray-600;
+
+  &:hover {
+    .slider_thumb {
+      @apply opacity-100 scale-100;
+    }
+  }
+
+  .slider_track {
+    @apply h-full absolute rounded-2xl bg-primary;
+  }
+
+  .slider_thumb {
+    @apply w-[15px] h-[15px] absolute top-[50%] rounded-full opacity-0 scale-[0.9] -translate-x-1/2 -translate-y-1/2 bg-primary transition-[opacity,transform];
+
+    &:active {
+      @apply opacity-100 scale-100;
+    }
+  }
+}

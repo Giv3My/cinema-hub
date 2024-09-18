@@ -1,0 +1,17 @@
+.overlay {
+  @apply fixed inset-0 flex justify-center items-center z-[1000] animate-fade;
+
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.window {
+  @apply w-[80%] max-w-lg p-5 relative rounded-lg duration-500 bg-gray-900 animate-slideIn;
+
+  > button {
+    @apply absolute top-5 right-5 text-xl transition-colors;
+
+    &:hover {
+      @apply text-primary;
+    }
+  }
+}

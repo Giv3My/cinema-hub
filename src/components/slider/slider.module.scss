@@ -1,0 +1,30 @@
+@import '@/common/styles/_mixins';
+
+.slider {
+  @apply relative overflow-hidden select-none;
+
+  .slide {
+    @apply h-[350px] flex items-center relative overflow-hidden shadow-xl;
+    @include fade-bg-gradient();
+
+    .image {
+      @apply object-center object-cover;
+    }
+
+    .content {
+      @apply px-14 relative z-20;
+
+      .title {
+        @apply mb-2 text-5xl text-white font-semibold leading-[60px] uppercase;
+      }
+
+      .sub_title {
+        @apply mb-4 text-neutral-300 font-medium uppercase;
+      }
+
+      .button {
+        @apply px-10;
+      }
+    }
+  }
+}

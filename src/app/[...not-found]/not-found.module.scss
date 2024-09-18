@@ -1,0 +1,19 @@
+.wrapper {
+  @apply w-full h-[100vh] flex items-center gap-y-4;
+
+  &.manage {
+    @apply h-[80vh];
+  }
+
+  & > .area {
+    @apply w-full gap-y-4 flex items-center flex-col;
+
+    & > h1 {
+      @apply text-3xl;
+    }
+
+    & > .link {
+      @apply underline-offset-4 hover:underline;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import '@/common/styles/mixins';
+
+.banner {
+  @apply w-full h-[450px] flex flex-col justify-end relative overflow-hidden shadow-lg;
+  @include fade-bg-gradient();
+
+  & > .image {
+    @apply object-center object-cover;
+  }
+}

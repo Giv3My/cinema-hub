@@ -1,0 +1,85 @@
+@import '@/common/styles/mixins';
+
+.wrapper {
+  @apply mt-6 relative rounded-2xl overflow-hidden shadow-xl animate-fade;
+
+  & > .loading {
+    @apply w-full h-full flex justify-center items-center bg-gray-800;
+  }
+
+  & > .video_container {
+    @apply flex items-center;
+
+    video {
+      @apply w-full;
+
+      &::-webkit-media-controls {
+        display: none !important;
+      }
+
+      &::-webkit-media-controls-enclosure {
+        display: none !important;
+      }
+    }
+
+    & > .video_bottom {
+      @apply select-none invisible opacity-0 transition-all duration-[300ms];
+      @include fade-bg-gradient(0);
+
+      &::before {
+        @apply z-0;
+      }
+
+      & > .progress_bar {
+        @apply absolute left-4 right-4 bottom-14;
+      }
+
+      & > .controls {
+        @apply flex items-center justify-between absolute left-6 right-6 bottom-3;
+
+        button {
+          @apply text-2xl text-white outline-none opacity-60 transition-opacity hover:opacity-100;
+        }
+
+        & > div:first-child {
+          @apply flex items-center justify-between;
+
+          & > button {
+            @apply mr-3;
+          }
+
+          & > .play_button {
+            @apply text-4xl;
+          }
+
+          & > .volume {
+            @apply w-[100px] flex items-center;
+          }
+
+          & > .time_controls {
+            @apply ml-4 flex items-center text-white opacity-60;
+
+            & > p:nth-child(2) {
+              @apply mx-2;
+            }
+          }
+        }
+
+        & > div:last-child {
+          @apply flex items-center;
+
+          & > button {
+            @apply text-3xl;
+          }
+        }
+      }
+    }
+
+    &.paused,
+    &:hover {
+      & > .video_bottom {
+        @apply visible opacity-100;
+      }
+    }
+  }
+}
